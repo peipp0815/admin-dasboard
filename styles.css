@@ -1,0 +1,173 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --sidebar-color: blue;
+  --header-color: yellow;
+  --main-content-color: red;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 150px 1fr;
+}
+
+.header {
+  background-color: var(--header-color);
+
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 200px;
+  grid-template-rows: 1fr 1fr;
+}
+
+.header > * {
+  border: 2px solid orange;
+}
+
+.search {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.profile-info {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.welcome {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.buttons {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.sidebar {
+  background-color: var(--sidebar-color);
+  grid-column: 1;
+  grid-row: 1/3;
+
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  grid-template-rows: repeat(12, 25px);
+
+  color: white;
+}
+
+.sidebar > * {
+  border: 2px solid pink;
+}
+
+.dashboard {
+  grid-row: 1;
+}
+
+.home {
+  grid-row: 3;
+}
+
+.profile {
+  grid-row: 4;
+}
+
+.messages {
+  grid-row: 5;
+}
+
+.history {
+  grid-row: 6;
+}
+
+.tasks {
+  grid-row: 7;
+}
+
+.communities {
+  grid-row: 8;
+}
+
+.settings {
+  grid-row: 10;
+}
+
+.support {
+  grid-row: 11;
+}
+
+.privacy {
+  grid-row: 12;
+}
+
+.main-content {
+  background-color: var(--main-content-color);
+}
