@@ -199,3 +199,14 @@ h6 {
   border: 2px solid skyblue;
   width: 250px;
 }
+
+.announcements-container {
+  background-color: var(--header-color);
+  height: 250px;
+
+  display: grid;
+}
+
+.announcement {
+  overflow: hidden;
+}
