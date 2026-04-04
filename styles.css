@@ -68,9 +68,10 @@ h6 {
 }
 
 :root {
-  --sidebar-color: blue;
-  --header-color: yellow;
-  --main-content-color: red;
+  --sidebar-color: rgb(0, 145, 255);
+  --header-color: rgb(238, 253, 234);
+  --main-content-color: rgb(206, 230, 213);
+  --highlight-color: red;
 }
 
 .container {
@@ -84,12 +85,17 @@ h6 {
   background-color: var(--header-color);
 
   display: grid;
-  grid-template-columns: minmax(200px, 1fr) 200px;
+  grid-template-columns: minmax(200px, 1fr) 300px;
   grid-template-rows: 1fr 1fr;
 }
 
 .header > * {
   border: 2px solid orange;
+}
+
+.header img {
+  height: 50px;
+  border-radius: 50%;
 }
 
 .search {
@@ -100,6 +106,13 @@ h6 {
 .profile-info {
   grid-column: 2;
   grid-row: 1;
+
+  display: grid;
+  grid-template-columns: 1fr 80px 140px;
+}
+
+.profile-info > * {
+  border: 2px solid hotpink;
 }
 
 .welcome {
