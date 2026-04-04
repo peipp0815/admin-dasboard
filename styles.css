@@ -210,3 +210,10 @@ h6 {
 .announcement {
   overflow: hidden;
 }
+
+.trending-container {
+  background-color: var(--header-color);
+  height: 250px;
+
+  display: grid;
+}
