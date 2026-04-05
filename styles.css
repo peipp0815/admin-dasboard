@@ -68,14 +68,14 @@ h6 {
 }
 
 :root {
-  --sidebar-color: rgb(0, 145, 255);
-  --header-color: rgb(238, 253, 234);
-  --main-content-color: rgb(206, 230, 213);
+  --sidebar-color: black;
+  --header-color: white;
+  --main-content-color: rgb(237, 237, 237);
   --highlight-color: red;
 }
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 200px 1fr;
   grid-template-rows: 150px 1fr;
@@ -93,9 +93,10 @@ h6 {
   border: 2px solid orange;
 }
 
-.header img {
+.profile-picture {
   height: 50px;
   border-radius: 50%;
+  width: 50px;
 }
 
 .search {
