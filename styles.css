@@ -72,8 +72,8 @@ h6 {
 :root {
   --sidebar-color: black;
   --header-color: white;
-  --main-content-color: rgb(237, 237, 237);
-  --highlight-color: red;
+  --main-content-color: rgb(220, 220, 220);
+  --accent-color: red;
 
   font-family: "Spectral", serif;
 }
@@ -87,6 +87,7 @@ h6 {
 
 .header {
   background-color: var(--header-color);
+  padding: 8px 16px;
 
   display: grid;
   grid-template-columns: minmax(300px, 1fr) 300px;
@@ -94,14 +95,43 @@ h6 {
 }
 
 .profile-picture {
-  height: 50px;
+  height: 40px;
   border-radius: 50%;
-  width: 50px;
+  width: 40px;
 }
 
 .search {
   grid-column: 1;
   grid-row: 1;
+}
+
+.search > form {
+  display: grid;
+  grid-template-columns: 37px 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.search label {
+  display: grid;
+  align-items: center;
+}
+
+.search button {
+  background-color: var(--header-color);
+  border: 0;
+  cursor: pointer;
+}
+
+#search-icon {
+  height: 30px;
+}
+
+.search input {
+  background-color: var(--main-content-color);
+  border: 0;
+  border-radius: 25px;
+  max-width: 500px;
 }
 
 .profile-info {
@@ -117,13 +147,15 @@ h6 {
   grid-row: 2;
 
   display: grid;
-  grid-template-columns: 100px minmax(200px, 1fr);
+  grid-template-columns: 60px minmax(200px, 1fr);
   grid-template-rows: 30px 1fr;
 }
 
 .welcome > .profile-picture {
   grid-column: 1;
   grid-row: 1/3;
+  height: 50px;
+  width: 50px;
 }
 
 .buttons {
@@ -132,6 +164,8 @@ h6 {
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-content: end;
+  gap: 8px;
 }
 
 .sidebar {
@@ -148,6 +182,7 @@ h6 {
 
 .dashboard {
   grid-row: 1;
+  font-size: x-large;
 }
 
 .home {
@@ -188,10 +223,12 @@ h6 {
 
 .main-content {
   background-color: var(--main-content-color);
+  padding: 8px 16px;
 
   display: grid;
   grid-template-columns: minmax(300px, 1fr) 250px;
   grid-template-rows: 300px 1fr;
+  gap: 16px;
 }
 
 .projects {
