@@ -1,3 +1,5 @@
+@import url(https://fonts.bunny.net/css?family=spectral:400,700);
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -72,6 +74,8 @@ h6 {
   --header-color: white;
   --main-content-color: rgb(237, 237, 237);
   --highlight-color: red;
+
+  font-family: "Spectral", serif;
 }
 
 .container {
@@ -87,10 +91,6 @@ h6 {
   display: grid;
   grid-template-columns: minmax(300px, 1fr) 300px;
   grid-template-rows: 1fr 1fr;
-}
-
-.header > * {
-  border: 2px solid orange;
 }
 
 .profile-picture {
@@ -110,10 +110,6 @@ h6 {
 
   display: grid;
   grid-template-columns: 1fr 80px 140px;
-}
-
-.profile-info > * {
-  border: 2px solid hotpink;
 }
 
 .welcome {
@@ -138,10 +134,6 @@ h6 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.buttons > * {
-  border: 2px solid turquoise;
-}
-
 .sidebar {
   background-color: var(--sidebar-color);
   grid-column: 1;
@@ -152,10 +144,6 @@ h6 {
   grid-template-rows: repeat(12, 25px);
 
   color: white;
-}
-
-.sidebar > * {
-  border: 2px solid pink;
 }
 
 .dashboard {
@@ -206,10 +194,6 @@ h6 {
   grid-template-rows: 300px 1fr;
 }
 
-.main-content > * {
-  border: 2px solid green;
-}
-
 .projects {
   grid-row: span 2;
 
@@ -226,7 +210,6 @@ h6 {
 
 .project {
   background-color: var(--header-color);
-  border: 2px solid skyblue;
   width: 250px;
 }
 
@@ -250,12 +233,8 @@ h6 {
 
 .trending-profile {
   display: grid;
-  grid-template-columns: 100px minmax(200px, 1fr);
+  grid-template-columns: 100px 1fr;
   grid-template-rows: 1fr 1fr;
-}
-
-.trending-profile > * {
-  border: 2px solid teal;
 }
 
 .trending-profile > .profile-picture {
