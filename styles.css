@@ -298,21 +298,31 @@ button {
 .trending-container {
   background-color: var(--header-color);
   height: 250px;
+  padding: 8px;
+  border-radius: 10px;
 
   display: grid;
 }
 
 .trending-profile {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 55px 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
 .trending-profile > .profile-picture {
   grid-column: 1;
   grid-row: 1/3;
+  align-self: center;
+  justify-self: center;
 }
 
 .profile-tag {
   grid-column: 2;
+  align-self: end;
+  font-weight: 700;
+}
+
+.profile-description {
+  align-self: start;
 }
