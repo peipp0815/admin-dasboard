@@ -75,6 +75,7 @@ h6 {
   --main-content-color: rgb(220, 220, 220);
   --accent-color: rgb(198, 2, 2);
   --button-hover: rgb(38, 38, 38);
+  --main-content-shadow: rgb(167, 167, 167);
 
   font-family: "Spectral", serif;
 }
@@ -153,7 +154,18 @@ a {
   grid-row: 1;
 
   display: grid;
-  grid-template-columns: 1fr 80px 140px;
+  grid-template-columns: 60px 60px 120px;
+  align-items: center;
+  justify-content: end;
+  justify-items: center;
+}
+
+.alert svg {
+  height: 25px;
+}
+
+.profile-info .profile-name {
+  font-weight: 700;
 }
 
 .welcome {
@@ -162,14 +174,22 @@ a {
 
   display: grid;
   grid-template-columns: 60px minmax(200px, 1fr);
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 36px 36px;
+  column-gap: 8px;
+  align-items: center;
+
+  font-weight: 700;
 }
 
 .welcome > .profile-picture {
   grid-column: 1;
   grid-row: 1/3;
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: auto;
+}
+
+.welcome-message {
+  align-self: end;
 }
 
 .welcome > .profile-name {
@@ -191,6 +211,7 @@ a {
   background-color: var(--sidebar-color);
   border-radius: 25px;
   border: 0;
+  margin-bottom: 8px;
 }
 
 .buttons button:hover {
@@ -271,12 +292,12 @@ a {
 
 .main-content {
   background-color: var(--main-content-color);
-  padding: 8px 16px;
+  padding: 16px;
+  box-shadow: inset 0 5px 5px var(--main-content-shadow);
 
   display: grid;
   grid-template-columns: minmax(600px, 1fr) 250px;
   grid-template-rows: 400px 1fr;
-
   gap: 16px;
 }
 
@@ -300,7 +321,6 @@ a {
   padding: 8px;
   border-radius: 10px;
   border-left: 10px solid var(--accent-color);
-  overflow: hidden;
   height: 300px;
 }
 
@@ -316,6 +336,31 @@ a {
 
 .project.real img {
   height: 150px;
+  place-self: center;
+}
+
+.project.fake .description {
+  max-height: 214px;
+  display: -webkit-box;
+  -webkit-line-clamp: 9; /* Truncate after 3 lines */
+  line-clamp: 9;
+  -webkit-box-orient: vertical; /* Vertical box layout */
+
+  /* Hide overflow and add ellipsis */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project.real .description {
+  max-height: 70px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Truncate after 3 lines */
+  line-clamp: 3;
+  -webkit-box-orient: vertical; /* Vertical box layout */
+
+  /* Hide overflow and add ellipsis */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .project svg {
@@ -401,4 +446,8 @@ a {
 
 .profile-description {
   align-self: start;
+}
+
+.box {
+  box-shadow: 2px 2px 2px var(--main-content-shadow);
 }
