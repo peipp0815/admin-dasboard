@@ -415,6 +415,10 @@ a {
   border: 0;
 }
 
+.announcement:last-child p a {
+  text-decoration: underline;
+}
+
 .trending-container {
   background-color: var(--header-color);
   height: 250px;
