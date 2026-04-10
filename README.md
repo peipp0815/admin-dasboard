@@ -1,3 +1,3 @@
 # admin-dasboard
 
-A way to train some html and css skills.
+A way to train some html and css skills. Mainly grid.
